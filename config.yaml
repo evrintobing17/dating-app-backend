@@ -1,0 +1,12 @@
+server:
+  port: ":8080"
+redis:
+  addr: "localhost:6379"
+  password: ""
+  db: 1
+db:
+  host: "127.0.0.1"
+  port: "5432"
+  user: "dating_user"
+  password: "some_password"
+  name: "dating_app"
