@@ -7,3 +7,8 @@ type Swipe struct {
 	Action    string `json:"action"`
 	SwipedAt  string `json:"swiped_at"`
 }
+
+type SwipeRequest struct {
+	ProfileID int    `json:"profile_id" binding:"required"`
+	Action    string `json:"action" binding:"required"`
+}

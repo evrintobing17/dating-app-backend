@@ -37,3 +37,9 @@ func (a *authRepo) SignUp(query string, user *models.User) error {
 	}
 	return err
 }
+
+func (a *authRepo) UpdateUser(context context.Context, userID int) error {
+	query := "UPDATE users SET is_premium = TRUE WHERE id = $1"
+	_, err := a.db.Conn.Exec(query, userID)
+	return err
+}
